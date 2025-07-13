@@ -27,14 +27,14 @@ function searchSREJobsWithCSE() {
     const emailBody = results.map(r => `🔗 ${r.link}\n📌 ${r.title}`).join('\n\n');
     MailApp.sendEmail({
       to: userEmail,
-      subject: "📬 SRE Job Alerts (Last 7 Days Only)",
+      subject: "📬  Job Alerts (Last 7 Days Only)", # repalce email subject line
       body: emailBody
     });
   } else {
     MailApp.sendEmail({
       to: userEmail,
       subject: "SRE Job Alerts: No Recent Posts",
-      body: "No recent SRE job links (past 7 days) were found."
+      body: "No recent  job links (past 7 days) were found."
     });
   }
 }
