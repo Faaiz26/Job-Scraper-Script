@@ -1,8 +1,8 @@
 function searchSREJobsWithCSE() {
-  const apiKey = "AIzaSyDweJUTvpDW5Cv-geKT4RXx5QscTVp-4tM";
-  const searchEngineId = "70204cbca563d4308";
-  const query = '"Site Reliability Engineer" OR "SRE" remote "3 to 5 years"';
-  const userEmail = "mohdfaaiz65@gmail.com";
+  const apiKey = ""; #apiKey
+  const searchEngineId = "";#searchEngineId
+  const query = 'Job Title';
+  const userEmail = "<emailid>"; #replace your email id here
 
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Sheet1');
   sheet.clearContents();
