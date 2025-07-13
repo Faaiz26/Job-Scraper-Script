@@ -1,8 +1,8 @@
 function searchSREJobsWithCSE() {
-  const apiKey = ""; #apiKey
-  const searchEngineId = "";#searchEngineId
+  const apiKey = ""; //apiKey
+  const searchEngineId = "";//searchEngineId
   const query = 'Job Title';
-  const userEmail = "<emailid>"; #replace your email id here
+  const userEmail = "<emailid>"; //replace your email id here
 
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Sheet1');
   sheet.clearContents();
@@ -27,13 +27,13 @@ function searchSREJobsWithCSE() {
     const emailBody = results.map(r => `🔗 ${r.link}\n📌 ${r.title}`).join('\n\n');
     MailApp.sendEmail({
       to: userEmail,
-      subject: "📬  Job Alerts (Last 7 Days Only)", # repalce email subject line
+      subject: "📬  Job Alerts (Last 7 Days Only)", // repalce email subject line
       body: emailBody
     });
   } else {
     MailApp.sendEmail({
       to: userEmail,
-      subject: "SRE Job Alerts: No Recent Posts",
+      subject: "Job Alerts: No Recent Posts",
       body: "No recent  job links (past 7 days) were found."
     });
   }
